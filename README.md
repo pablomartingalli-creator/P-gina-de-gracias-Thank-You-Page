@@ -1,2 +1,117 @@
 # P-gina-de-gracias-Thank-You-Page
 Página de Gracias
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Pago confirmado! | Persaltum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #111;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffd700;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: .9;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 14px 22px;
+            background: #ffd700;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 320px;
+            transition: 0.2s ease-in-out;
+        }
+        .button:hover {
+            background: #fff2ae;
+        }
+        .section-title {
+            margin-top: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffd700;
+        }
+        .cta-secondary {
+            color: #ffd700;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+        .cta-secondary a {
+            color: #ffd700;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>¡Tu pago fue confirmado! 🔥</h1>
+        <p class="subtitle">Gracias por confiar en <strong>Persaltum</strong>. Ya podés acceder a tu material.</p>
+
+        <!-- DESCARGA DIRECTA DEL PDF -->
+        <a class="button" href="LINK_PDF" target="_blank">
+            📘 Descargar PDF – Método Persaltum
+        </a>
+
+        <!-- ACCESO AL VSL -->
+        <a class="button" href="LINK_VSL" target="_blank">
+            🎥 Ver VSL Completo
+        </a>
+
+        <p style="margin-top: 30px; font-size: 15px; opacity: 0.9;">
+            También te envié todo a tu correo y WhatsApp.  
+            Si no lo encontrás, revisá SPAM o escribime directamente:
+        </p>
+
+        <a class="button" href="https://wa.me/5491139322197" target="_blank">
+            💬 Contactar a Pablo por WhatsApp
+        </a>
+
+        <h2 class="section-title">¿Cuál es el siguiente paso?</h2>
+        <p style="opacity: 0.9; font-size: 16px;">
+            Si querés que trabajemos juntos para construir tu infoproducto, tu embudo
+            y tu sistema de ventas completo, te dejo acá el acceso a la Mentoría Persaltum.
+        </p>
+
+        <a class="button" style="background:#ffffff; color:#000;" href="LINK_MENTORIA" target="_blank">
+            🚀 Aplicar a la Mentoría Persaltum
+        </a>
+
+        <p class="cta-secondary">
+            Si necesitás ayuda en cualquier momento, escribime a  
+            <a href="mailto:pablomartingalli@gmail.com">pablomartingalli@gmail.com</a>
+        </p>
+    </div>
+
+</body>
+</html>
