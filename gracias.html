@@ -1,117 +1,194 @@
-# P-gina-de-gracias-Thank-You-Page
-Página de Gracias
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>¡Pago confirmado! | Persaltum</title>
+    <title>Gracias por tu compra | Persaltum</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-main: #050509;
+            --card-bg: #0c0c12;
+            --text-main: #f5f5f5;
+            --text-muted: #b9b9c4;
+            --gold: #f3c96a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: #0d0d0d;
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
+            background: radial-gradient(circle at top, #14141f 0, #050509 55%);
+            color: var(--text-main);
+            padding: 40px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
         }
+
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: #111;
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+            width: 100%;
+            max-width: 720px;
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 36px 24px 32px;
+            border: 1px solid rgba(243, 201, 106, 0.25);
+            box-shadow: 0 0 28px rgba(0, 0, 0, 0.8);
         }
-        h1 {
-            font-size: 32px;
+
+        .logo {
             font-weight: 700;
-            color: #ffd700;
+            letter-spacing: 0.14em;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
         }
+
+        .headline {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 4px 0 8px;
+        }
+
+        .highlight {
+            color: var(--gold);
+        }
+
         .subtitle {
-            font-size: 18px;
-            margin-top: 10px;
-            opacity: .9;
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 22px;
         }
+
+        .divider {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, rgba(243,201,106,0.7), transparent);
+            margin: 18px 0 24px;
+        }
+
         .button {
             display: block;
-            margin: 20px auto;
-            padding: 14px 22px;
-            background: #ffd700;
-            color: #000;
+            width: 100%;
+            max-width: 360px;
+            margin: 10px auto;
+            padding: 14px 20px;
+            border-radius: 999px;
+            border: 1px solid var(--gold);
+            background: #050509;
+            color: var(--gold);
             text-decoration: none;
             font-weight: 600;
-            font-size: 18px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 320px;
-            transition: 0.2s ease-in-out;
-        }
-        .button:hover {
-            background: #fff2ae;
-        }
-        .section-title {
-            margin-top: 40px;
-            font-size: 20px;
-            font-weight: 600;
-            color: #ffd700;
-        }
-        .cta-secondary {
-            color: #ffd700;
             font-size: 16px;
-            margin-top: 25px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            transition: all 0.18s ease-in-out;
         }
-        .cta-secondary a {
-            color: #ffd700;
+
+        .button:hover {
+            background: var(--gold);
+            color: #050509;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(243, 201, 106, 0.35);
+        }
+
+        .section-title {
+            margin-top: 30px;
+            font-size: 18px;
             font-weight: 600;
+        }
+
+        .section-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .note {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 18px;
+        }
+
+        .note strong {
+            color: var(--text-main);
+        }
+
+        .footer {
+            margin-top: 28px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 18px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .headline {
+                font-size: 30px;
+            }
         }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>¡Tu pago fue confirmado! 🔥</h1>
-        <p class="subtitle">Gracias por confiar en <strong>Persaltum</strong>. Ya podés acceder a tu material.</p>
+<div class="container">
+    <div class="logo">PERSALTUM · UNIVERSIDAD DIGITAL DEL INFOPRODUCTO</div>
+    <h1 class="headline">
+        ¡Tu pago fue <span class="highlight">confirmado</span>! 🚀
+    </h1>
+    <p class="subtitle">
+        Gracias por confiar en <strong>Persaltum</strong>.  
+        Ya podés acceder al <strong>PDF + VSL del Método Persaltum</strong>.
+    </p>
 
-        <!-- DESCARGA DIRECTA DEL PDF -->
-        <a class="button" href="LINK_PDF" target="_blank">
-            📘 Descargar PDF – Método Persaltum
-        </a>
+    <div class="divider"></div>
 
-        <!-- ACCESO AL VSL -->
-        <a class="button" href="LINK_VSL" target="_blank">
-            🎥 Ver VSL Completo
-        </a>
+    <!-- DESCARGA DIRECTA DEL PDF -->
+    <a class="button" href="LINK_PDF" target="_blank">
+        📘 Descargar PDF – Método Persaltum
+    </a>
 
-        <p style="margin-top: 30px; font-size: 15px; opacity: 0.9;">
-            También te envié todo a tu correo y WhatsApp.  
-            Si no lo encontrás, revisá SPAM o escribime directamente:
-        </p>
+    <!-- ACCESO AL VSL -->
+    <a class="button" href="LINK_VSL" target="_blank">
+        🎥 Ver VSL completo del Método
+    </a>
 
-        <a class="button" href="https://wa.me/5491139322197" target="_blank">
-            💬 Contactar a Pablo por WhatsApp
-        </a>
+    <p class="note">
+        <strong>Importante:</strong> también enviamos estos enlaces a tu correo electrónico.  
+        Si no ves el mensaje en la bandeja principal, revisá SPAM o promociones.
+    </p>
 
-        <h2 class="section-title">¿Cuál es el siguiente paso?</h2>
-        <p style="opacity: 0.9; font-size: 16px;">
-            Si querés que trabajemos juntos para construir tu infoproducto, tu embudo
-            y tu sistema de ventas completo, te dejo acá el acceso a la Mentoría Persaltum.
-        </p>
+    <h2 class="section-title">Tu próximo paso dentro de Persaltum</h2>
+    <p class="section-text">
+        Si querés que trabajemos más cerca para construir tu infoproducto, tu sistema de ventas
+        y tu negocio digital completo, podés aplicar a la
+        <strong>Mentoría Persaltum</strong>.  
+        Es el siguiente nivel para implementar el método con acompañamiento.
+    </p>
 
-        <a class="button" style="background:#ffffff; color:#000;" href="LINK_MENTORIA" target="_blank">
-            🚀 Aplicar a la Mentoría Persaltum
-        </a>
+    <a class="button" href="LINK_MENTORIA" target="_blank">
+        🚀 Aplicar a la Mentoría Persaltum
+    </a>
 
-        <p class="cta-secondary">
-            Si necesitás ayuda en cualquier momento, escribime a  
-            <a href="mailto:pablomartingalli@gmail.com">pablomartingalli@gmail.com</a>
-        </p>
+    <div class="footer">
+        Ante cualquier inconveniente con el acceso, podés escribir a  
+        <a href="mailto:pablomartingalli@gmail.com">pablomartingalli@gmail.com</a>.
     </div>
+</div>
 
 </body>
 </html>
