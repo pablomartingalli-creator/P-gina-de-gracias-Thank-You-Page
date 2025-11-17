@@ -10,7 +10,7 @@
     <style>
         :root {
             --bg-main: #050509;
-            --card-bg: #0c0c12;
+            --card-bg: #0b0b11;
             --text-main: #f5f5f5;
             --text-muted: #b9b9c4;
             --gold: #f3c96a;
@@ -23,7 +23,7 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle at top, #14141f 0, #050509 55%);
+            background: radial-gradient(circle at top, #191926 0, #050509 60%);
             color: var(--text-main);
             padding: 40px 16px;
             display: flex;
@@ -34,37 +34,49 @@
 
         .container {
             width: 100%;
-            max-width: 720px;
+            max-width: 960px;
             background: var(--card-bg);
-            border-radius: 18px;
-            padding: 36px 24px 32px;
-            border: 1px solid rgba(243, 201, 106, 0.25);
-            box-shadow: 0 0 28px rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 32px 20px 28px;
+            border: 1px solid rgba(243, 201, 106, 0.28);
+            box-shadow: 0 0 32px rgba(0, 0, 0, 0.8);
         }
 
-        .logo {
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            max-width: 200px;
+            width: 60%;
+            height: auto;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        .logo-text {
             font-weight: 700;
-            letter-spacing: 0.14em;
-            font-size: 13px;
+            letter-spacing: 0.16em;
+            font-size: 11px;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 6px;
         }
 
         .headline {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
-            margin: 4px 0 8px;
+            margin: 12px 0 6px;
         }
 
-        .highlight {
+        .headline span {
             color: var(--gold);
         }
 
         .subtitle {
             font-size: 15px;
             color: var(--text-muted);
-            margin-bottom: 22px;
+            margin: 6px 0 18px;
         }
 
         .divider {
@@ -78,7 +90,7 @@
             display: block;
             width: 100%;
             max-width: 360px;
-            margin: 10px auto;
+            margin: 8px auto;
             padding: 14px 20px;
             border-radius: 999px;
             border: 1px solid var(--gold);
@@ -86,7 +98,7 @@
             color: var(--gold);
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             text-align: center;
             letter-spacing: 0.02em;
             transition: all 0.18s ease-in-out;
@@ -100,22 +112,63 @@
         }
 
         .section-title {
-            margin-top: 30px;
+            margin-top: 28px;
             font-size: 18px;
             font-weight: 600;
+            text-align: center;
         }
 
         .section-text {
             font-size: 14px;
             color: var(--text-muted);
             line-height: 1.6;
-            margin-top: 8px;
+            margin: 8px auto 18px;
+            max-width: 720px;
+            text-align: center;
+        }
+
+        .tracks {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .track-card {
+            background: #09090f;
+            border-radius: 14px;
+            padding: 14px 14px 16px;
+            border: 1px solid rgba(243,201,106,0.25);
+        }
+
+        .track-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .track-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .track-link {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(243,201,106,0.6);
+            padding-bottom: 1px;
         }
 
         .note {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
-            margin-top: 18px;
+            margin-top: 16px;
+            text-align: center;
         }
 
         .note strong {
@@ -123,11 +176,12 @@
         }
 
         .footer {
-            margin-top: 28px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 18px;
-            font-size: 12px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 14px;
+            font-size: 11px;
             color: var(--text-muted);
+            text-align: center;
         }
 
         .footer a {
@@ -138,7 +192,10 @@
 
         @media (min-width: 768px) {
             .headline {
-                font-size: 30px;
+                font-size: 28px;
+            }
+            .tracks {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     </style>
@@ -146,48 +203,87 @@
 <body>
 
 <div class="container">
-    <div class="logo">PERSALTUM · UNIVERSIDAD DIGITAL DEL INFOPRODUCTO</div>
-    <h1 class="headline">
-        ¡Tu pago fue <span class="highlight">confirmado</span>! 🚀
-    </h1>
-    <p class="subtitle">
-        Gracias por confiar en <strong>Persaltum</strong>.  
-        Ya podés acceder al <strong>PDF + VSL del Método Persaltum</strong>.
-    </p>
+
+    <div class="header">
+        <!-- LOGO PERSALTUM -->
+        <img src="persaltum-logo.png" alt="Persaltum - Universidad Digital del Infoproducto" class="logo-img" />
+        <div class="logo-text">PERSALTUM · UNIVERSIDAD DIGITAL DEL INFOPRODUCTO</div>
+
+        <h1 class="headline">
+            Gracias por adquirir el <span>Documento del Método Persaltum</span>
+        </h1>
+        <p class="subtitle">
+            Bienvenido a la <strong>Universidad Digital del Infoproducto</strong>.  
+            Desde hoy tenés en tus manos la base del sistema para construir y escalar tu negocio digital.
+        </p>
+    </div>
 
     <div class="divider"></div>
 
-    <!-- DESCARGA DIRECTA DEL PDF -->
+    <!-- BOTONES PRINCIPALES -->
     <a class="button" href="LINK_PDF" target="_blank">
         📘 Descargar PDF – Método Persaltum
     </a>
 
-    <!-- ACCESO AL VSL -->
     <a class="button" href="LINK_VSL" target="_blank">
         🎥 Ver VSL completo del Método
     </a>
 
     <p class="note">
-        <strong>Importante:</strong> también enviamos estos enlaces a tu correo electrónico.  
+        <strong>Importante:</strong> también te enviamos estos enlaces por correo electrónico.  
         Si no ves el mensaje en la bandeja principal, revisá SPAM o promociones.
     </p>
 
-    <h2 class="section-title">Tu próximo paso dentro de Persaltum</h2>
+    <!-- RUTAS DENTRO DE LA UNIVERSIDAD -->
+    <h2 class="section-title">Tus próximos pasos dentro de Persaltum</h2>
     <p class="section-text">
-        Si querés que trabajemos más cerca para construir tu infoproducto, tu sistema de ventas
-        y tu negocio digital completo, podés aplicar a la
-        <strong>Mentoría Persaltum</strong>.  
-        Es el siguiente nivel para implementar el método con acompañamiento.
+        Según el punto en el que estés hoy, podés avanzar al siguiente nivel dentro de la Universidad.  
+        Elegí la opción que mejor se adapte a tu momento actual:
     </p>
 
-    <a class="button" href="LINK_MENTORIA" target="_blank">
-        🚀 Aplicar a la Mentoría Persaltum
-    </a>
+    <div class="tracks">
+        <!-- Sala Inicial -->
+        <div class="track-card">
+            <div class="track-title">Sala Inicial</div>
+            <div class="track-text">
+                Para quienes están comenzando.  
+                Claridad mental, elección de tema, propuesta de valor y creación de tu primer infoproducto.
+            </div>
+            <a href="LINK_SALA_INICIAL" target="_blank" class="track-link">
+                Entrar a la Sala Inicial →
+            </a>
+        </div>
+
+        <!-- Sala Business -->
+        <div class="track-card">
+            <div class="track-title">Sala Business</div>
+            <div class="track-text">
+                Para quienes ya tienen algo creado y quieren diseñar embudos, sistemas de venta y automatizaciones
+                para escalar resultados.
+            </div>
+            <a href="LINK_SALA_BUSINESS" target="_blank" class="track-link">
+                Entrar a la Sala Business →
+            </a>
+        </div>
+
+        <!-- Club Premium -->
+        <div class="track-card">
+            <div class="track-title">Club Premium</div>
+            <div class="track-text">
+                Espacio exclusivo para quienes deciden jugar en serio:  
+                mentoría cercana, revisión de estrategias, networking y acceso prioritario a todo lo nuevo.
+            </div>
+            <a href="LINK_CLUB_PREMIUM" target="_blank" class="track-link">
+                Entrar al Club Premium →
+            </a>
+        </div>
+    </div>
 
     <div class="footer">
         Ante cualquier inconveniente con el acceso, podés escribir a  
         <a href="mailto:pablomartingalli@gmail.com">pablomartingalli@gmail.com</a>.
     </div>
+
 </div>
 
 </body>
